@@ -1,0 +1,9 @@
+version: '2.1'
+
+
+services:
+  homeschool:
+    image: homeschool
+    build: .
+    ports:
+      - 8082:80  
