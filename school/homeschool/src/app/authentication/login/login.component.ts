@@ -24,5 +24,6 @@ export class LoginComponent extends BaseFormComponent implements OnInit {
     console.log(this.formGroup.value)
   }
   rememberPassword() {
+    
   }
 }
