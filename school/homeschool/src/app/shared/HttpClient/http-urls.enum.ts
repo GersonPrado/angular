@@ -1,4 +1,4 @@
-export enum HttpUrls {
+export enum HTTPURLS {
   AUTHENTICATION = "auth/login",
   AUTHENTICATIONRESETPASSWORD = "auth/reset-password"
 }

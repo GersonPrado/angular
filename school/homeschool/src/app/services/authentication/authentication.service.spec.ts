@@ -13,4 +13,8 @@ describe('AuthenticationService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  afterEach(() => {
+    service.loginUser({usuario: 'Gerson', password: 'admin'})
+  });
 });

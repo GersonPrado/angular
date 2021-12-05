@@ -11,13 +11,13 @@ import { SharedModule } from '../shared/shared.module';
 */
 @NgModule({
     declarations: [ LoginComponent ],
-    imports: [  
+    imports: [
                 SharedModule,
-                CommonModule, 
+                CommonModule,
                 FormsModule,
                 ReactiveFormsModule,
                 AuthenticationRoutingModule ],
     exports: [],
     providers: [ ],
 })
-export class AutheticationModule { }
+export class AuthenticationModule { }

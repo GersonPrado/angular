@@ -4,7 +4,7 @@ import { FormGroup, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-base-form',
   templateUrl: './base-form.component.html',
-  styleUrls: ['./base-form.component.css']
+  styleUrls: ['./base-form.component.scss']
 })
 export abstract class BaseFormComponent implements OnInit {
 

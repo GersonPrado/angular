@@ -6,16 +6,15 @@
       <div id="login">
         <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
           <fieldset class="clearfix">
-            <label for="id" class="control-label label-style">Id</label>  
-            <p>                
+            <label for="id" class="control-label label-style">Id</label>
+            <p>
                 <span class="fa fa-user">
                   <i class="material-icons">account_circle</i>
                 </span>
                 <input type="text" Placeholder="Id Aluno" formControlName="idLogin" id="idLogin"/>
                 <app-field-valid-value [showError]="validTouched('idLogin')" messageError="Digite o Id"></app-field-valid-value>
               </p>
-            <!-- JS because of IE support; better: placeholder="Username" -->
-            <label for="password" class="control-label label-style">Senha</label>  
+            <label for="password" class="control-label label-style">Senha</label>
             <p>
               <span class="fa fa-lock">
                 <i class="material-icons">lock</i>
@@ -24,9 +23,7 @@
               <app-field-valid-value [showError]="validTouched('passwordLogin')" messageError="Digite a senha"></app-field-valid-value>
             </p>
             <div>
-              <span
-                style="width: 48%; text-align: left; display: inline-block;"
-              >
+              <span style="width: 48%; text-align: left; display: inline-block;">
                 <a class="small-text" href="#">Esqueceu a senha?</a>
               </span>
               <span class="btn-submit">
@@ -39,7 +36,6 @@
 
         <div class="clearfix"></div>
       </div>
-      <!-- end login -->
       <div class="logo">
         <img src="./../../../assets/images/logo.png" alt="logo" />
 

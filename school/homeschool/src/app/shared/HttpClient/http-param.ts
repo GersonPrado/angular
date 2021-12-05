@@ -1,4 +1,4 @@
-export interface HttpParam {
+export interface IHttpParam {
   name: string,
   value: string,
 }
