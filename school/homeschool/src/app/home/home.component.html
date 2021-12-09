@@ -12,82 +12,34 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav">
-    <button mat-button class="menu-button" (click)="selectedMenu('home')">
+    <button mat-button class="menu-button" (click)="ngOnInit()">
       <mat-icon>home</mat-icon>
       <span>Página inicial</span>
     </button>
     <mat-divider></mat-divider>
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" (click)="ngOnInit()">
       <mat-icon>event</mat-icon>
       <span>Agenda</span>
     </button>
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" (click)="selectedMenu('paciente')" >
       <mat-icon>person</mat-icon>
       <span>Pacientes</span>
     </button>
-    <button mat-button class="menu-button">
-      <mat-icon>work</mat-icon>
+    <button mat-button class="menu-button" (click)="selectedMenu('consultas')">
+      <mat-icon>medical_services</mat-icon>
       <span>Consultas</span>
     </button>
-    <button mat-button class="menu-button">
-      <mat-icon style="color: red">person</mat-icon>
+    <button mat-button class="menu-button" (click)="selectedMenu('dentista')">
+      <mat-icon>manage_accounts</mat-icon>
       <span>Dentistas</span>
     </button>
     <mat-divider></mat-divider>
-    <button
-      mat-button
-      [matMenuTriggerFor]="menuConfigurations"
-      class="menu-button"
-    >
+    <button mat-button class="menu-button" (click)="showConfiguracoes()">
       <mat-icon>build</mat-icon>
       <span>Configurações</span>
-    </button>
-    <mat-menu #menuConfigurations>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>business</mat-icon>
-        <span>rede</span>
-      </button>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>store</mat-icon>
-        <span>clínica</span>
-      </button>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>store</mat-icon>
-        <span>clínicas-exames</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>store</mat-icon>
-        <span>especialidades</span>
-      </button>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>store</mat-icon>
-        <span>convenios</span>
-      </button>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>exame</mat-icon>
-        <span>exames</span>
-      </button>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>exame</mat-icon>
-        <span>procedimento</span>
-      </button>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>pay</mat-icon>
-        <span>formas de pagamento</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>exame</mat-icon>
-        <span>status consulta</span>
-      </button>
-      <button mat-menu-item class="menu-item">
-        <mat-icon>exame</mat-icon>
-        <span>status pagamento</span>
-      </button>
-    </mat-menu>
+    </button>    
     <mat-divider></mat-divider>
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" (click)="selectedMenu('help')">
       <mat-icon>help</mat-icon>
       <span>Ajuda</span>
     </button>
@@ -99,8 +51,11 @@
     </button>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="content mat-elevation-z4">
+    <div *ngIf="showAgenda" class="content mat-elevation-z4">
       <app-agenda></app-agenda>
+    </div>
+    <div *ngIf="!showAgenda" class="content mat-elevation-z4">
+      <app-cadastros></app-cadastros>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

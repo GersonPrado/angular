@@ -1,0 +1,136 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="container">
+<div class="cad-geral">
+  <h2>Cadastros do sistema, clique na opção desejada para realizar a configuração</h2>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="25%">
+      <mat-card (click)="onSelect('rede')">
+        <mat-icon>warehouse</mat-icon>
+        <br>
+        <mat-card-title>Rede</mat-card-title>
+        <mat-card-subtitle>rede de clínicas</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <div fxFlex="25%">
+      <mat-card (click)="onSelect('clinicas')">
+        <mat-icon>local_hospital</mat-icon>
+        <br>
+        <mat-card-title>Clínicas</mat-card-title>
+        <mat-card-subtitle>clínicas de atendimento</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <div fxFlex="25%">
+      <mat-card (click)="onSelect('clinicas-exame')">
+        <mat-icon>local_pharmacy</mat-icon>
+        <br>
+        <mat-card-title>Clínicas de exame</mat-card-title>
+        <mat-card-subtitle>clínicas parceiras</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <div fxFlex="25%">
+      <mat-card (click)="onSelect('convenios')">
+        <mat-icon>local_convenience_store</mat-icon>
+        <br>
+        <mat-card-title>Convênios</mat-card-title>
+        <mat-card-subtitle>convênios odontológicos</mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div layoutFlex="25%" fxFlexAlign="stretch">
+      <mat-card (click)="onSelect('status-exames')">
+        <mat-icon>category</mat-icon>
+        <br>
+        <mat-card-title>Status de exames</mat-card-title>
+        <mat-card-subtitle>Status de exames laboratoriais</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <div layoutFlex="25%" fxFlexAlign="stretch">
+      <mat-card (click)="onSelect('exame-laboratorio')">
+        <mat-icon>bloodtype</mat-icon>
+        <br>
+        <mat-card-title>Exames</mat-card-title>
+        <mat-card-subtitle>Exames laboratoriais</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <div layoutFlex="25%" fxFlexAlign="stretch">
+      <mat-card (click)="onSelect('status-procedimento')">
+        <mat-icon>category</mat-icon>
+        <br>
+        <mat-card-title>Status de procedimento</mat-card-title>
+        <mat-card-subtitle
+          >status de procedimentos odontologicos</mat-card-subtitle
+        >
+      </mat-card>
+    </div>
+    <div layoutFlex="25%" fxFlexAlign="stretch">
+      <mat-card (click)="onSelect('procedimentos')">
+        <mat-icon>description</mat-icon>
+        <br>
+        <mat-card-title>Procedimentos</mat-card-title>
+        <mat-card-subtitle>procedimentos odontologicas</mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="left left">
+    <div layoutFlex="25%" fxFlexAlign="stretch">
+      <mat-card (click)="onSelect('especialidades')">
+        <mat-icon>badge</mat-icon>
+        <br>
+        <mat-card-title>Especialidades</mat-card-title>
+        <mat-card-subtitle>especialidades odontologicas</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <div layoutFlex="25%" fxFlexAlign="stretch">
+      <mat-card (click)="onSelect('status-consulta')">
+        <mat-icon>fast_check</mat-icon>
+        <br>
+        <mat-card-title>Status consultas</mat-card-title>
+        <mat-card-subtitle>status de consultas odontologicas</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <div layoutFlex="25%" fxFlexAlign="stretch">
+      <mat-card (click)="onSelect('status-pagamento')">
+        <mat-icon>fast_check</mat-icon>
+        <br>
+        <mat-card-title>Status pagamento</mat-card-title>
+        <mat-card-subtitle
+          >status de pagamento de atendimento</mat-card-subtitle
+        >
+      </mat-card>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="left left">
+    <div layoutFlex="25%" fxFlexAlign="left">
+      <mat-card (click)="onSelect('forma-pagamento')">
+        <mat-icon>payments</mat-icon>
+        <br>
+        <mat-card-title>Formas de pagamento</mat-card-title>
+        <mat-card-subtitle
+          >formas de pagamento de atendimento</mat-card-subtitle
+        >
+      </mat-card>
+    </div>
+    <div layoutFlex="25%" fxFlexAlign="left">
+      <mat-card (click)="onSelect('pagamento-rede')">
+        <mat-icon>credit_card</mat-icon>
+        <br>
+        <mat-card-title>Formas de pagamento rede</mat-card-title>
+        <mat-card-subtitle
+          >formas de pagamento utilizadas na rede</mat-card-subtitle
+        >
+      </mat-card>
+    </div>
+    <div layoutFlex="25%" fxFlexAlign="left">
+      <mat-card (click)="onSelect('pagamento-clinica')">
+        <mat-icon>store</mat-icon>
+        <br>
+        <mat-card-title>Formas de pagamento clínica</mat-card-title>
+        <mat-card-subtitle
+          >formas de pagamento utilizado na clínica</mat-card-subtitle
+        >
+      </mat-card>
+    </div>
+  </div>
+</div>
+</div>

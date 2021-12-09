@@ -4,7 +4,7 @@ import { FormGroup, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-base-form',
   templateUrl: './base-form.component.html',
-  styleUrls: ['./base-form.component.scss']
+  styleUrls: ['./base-form.component.css']
 })
 export abstract class BaseFormComponent implements OnInit {
 
@@ -46,7 +46,7 @@ export abstract class BaseFormComponent implements OnInit {
     }
   }
 
-  validTouched(field: string) {    
+  validTouched(field: string) {
     return (
       !this.formGroup.get(field).valid && (this.formGroup.get(field).touched || this.formGroup.get(field).dirty)
     )
