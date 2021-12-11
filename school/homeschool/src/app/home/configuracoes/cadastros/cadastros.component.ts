@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-cadastros',
@@ -6,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastros.component.css']
 })
 export class CadastrosComponent implements OnInit {
-  constructor() { }
+  constructor(private router: Router){ }
 
-  ngOnInit( ): void {
+  ngOnInit (): void {
   }
 
-  onSelect(action: string) {
-    console.log(action)
+  onSelect (action: string) {
+    this.router.navigate([`/cadastros/${action}`])
   }
 }

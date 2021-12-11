@@ -8,6 +8,7 @@ import { HttpInterceptorCustom } from './shared/HttpClient/http-interceptor'
 import { HomeModule } from './home/home.module'
 import { AuthenticationService } from './services/authentication/authentication.service'
 import { AuthGuard } from './guards/auth-guard'
+import { RedeModule } from './cadastros/rede/rede.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AuthGuard } from './guards/auth-guard'
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    RedeModule,
     HomeModule
   ],
   providers: [

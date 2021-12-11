@@ -18,7 +18,7 @@ export class LoginComponent extends BaseFormComponent implements OnInit {
 
   constructor(  private formBuilder: FormBuilder,
                 private authentication: AuthenticationService,
-                private router: Router,) {
+                private router: Router) {
     super();
    }
 

@@ -1,0 +1,100 @@
+<mat-toolbar>
+  <span>SiS-Odonto</span>
+  <button mat-icon-button class="button-class">
+    <mat-icon>home</mat-icon>
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="container">
+  <div>
+    <h3 style="color: blue; margin-left: 10px">
+      Configurações dos parametros do sistema
+    </h3>
+    <h5 style="color: red; margin-left: 10px">
+      Atenção as alterações realizadas tem efeito imediato para os usuários do
+      sistema.
+    </h5>
+  </div>
+</div>
+
+<div class="content mat-elevation-z4">
+  <mat-tab-group>
+    <mat-tab label="memória e fluxo de parcelas">
+      <mat-list>
+        <mat-list-item *ngFor="let folder of folders">
+          <mat-icon mat-list-icon>settings</mat-icon>
+          <div *ngIf="folder.tipo === 'boolean'" mat-line>
+            {{ folder.descricao }}
+            <mat-slide-toggle
+              style="margin-left: 10px; margin-top: 10px"
+              [(ngModel)]="folder.ativo"
+              (change)="validChecked($event)"
+              [name]="folder.descricao"
+              >{{ folder.descValue }}</mat-slide-toggle
+            >
+          </div>
+          <div
+            *ngIf="folder.tipo === 'string' || folder.tipo === 'number'"
+            mat-line
+          >
+            <mat-label>{{ folder.descricao }}</mat-label>
+            <input matInput style="margin-left: 10px" />
+          </div>
+          <div mat-line>{{ folder.observacao }}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-tab>
+    <mat-tab label="confirmação de liquidação">
+      <mat-list>
+        <mat-list-item *ngFor="let folder of folders">
+          <mat-icon mat-list-icon>settings</mat-icon>
+          <div mat-line>
+            {{ folder.descricao }}
+            <mat-slide-toggle
+              style="margin-left: 10px; margin-top: 10px"
+              [(ngModel)]="folder.ativo"
+              (change)="validChecked($event)"
+              [name]="folder.descricao"
+              >{{ folder.descValue }}</mat-slide-toggle
+            >
+          </div>
+          <div mat-line>{{ folder.observacao }}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-tab>
+    <mat-tab label="saldo devedor">
+      <mat-list>
+        <mat-list-item *ngFor="let folder of folders">
+          <mat-icon mat-list-icon>settings</mat-icon>
+          <div mat-line>
+            {{ folder.descricao }}
+            <mat-slide-toggle
+              style="margin-left: 10px; margin-top: 10px"
+              [(ngModel)]="folder.ativo"
+              (change)="validChecked($event)"
+              [name]="folder.descricao"
+              >{{ folder.descValue }}</mat-slide-toggle
+            >
+          </div>
+          <div mat-line>{{ folder.observacao }}</div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="container">
+    <button style="align-items: flex-end" mat-button class="button-class">
+      Cancelar
+    </button>
+    <button
+      style="align-items: flex-end"
+      mat-button
+      class="button-class"
+      (click)="onSave()"
+    >
+      Confirmar
+    </button>
+  </div>
+</div>

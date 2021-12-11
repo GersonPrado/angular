@@ -16,6 +16,7 @@ import { AgendaComponent } from './home-agenda/agenda.component'
 import { CadastrosComponent } from './configuracoes/cadastros/cadastros.component'
 import { MatCardModule } from '@angular/material/card'
 import { FlexLayoutModule } from '@angular/flex-layout'
+
 @NgModule({
   declarations: [HomeComponent, AgendaComponent, CadastrosComponent],
   imports: [

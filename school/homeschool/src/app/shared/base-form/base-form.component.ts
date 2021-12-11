@@ -12,33 +12,32 @@ export abstract class BaseFormComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
   }
 
   abstract submit();
 
-  onSubmit() {
-    if( this.formGroup.valid) {
-      this.submit();
+  onSubmit () {
+    if (this.formGroup.valid) {
+      this.submit()
     } else {
-      console.log('Formulário inválido');
-      this.validForm(this.formGroup);
+      console.log('Formulário inválido')
+      this.validForm(this.formGroup)
     }
   }
 
-  validForm(formGroup: FormGroup | FormArray) {
-    Object.keys(formGroup.controls).forEach ( campo => {
-      console.log(campo);
-      const controle = formGroup.get(campo);
-      controle.markAsDirty();
-      controle.markAsTouched();
-      if(controle instanceof FormGroup || controle instanceof FormArray ) {
-        this.validForm(controle);
+  validForm (formGroup: FormGroup | FormArray) {
+    Object.keys(formGroup.controls).forEach(campo => {
+      const controle = formGroup.get(campo)
+      controle.markAsDirty()
+      controle.markAsTouched()
+      if (controle instanceof FormGroup || controle instanceof FormArray ) {
+        this.validForm(controle)
       }
-    });
+    })
   }
 
-  applyCssError(field: string) {
+  applyCssError (field: string) {
     console.log('applycsserror')
     return {
       'has-error': this.validTouched(field),
